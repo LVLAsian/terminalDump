@@ -1,0 +1,63 @@
+pi@V-Core3:~ $ apt list duet\*
+Listing... Done
+duetcontrolserver/stable,now 3.3.0 armhf [installed,automatic]
+duetpimanagementplugin/stable,now 3.3.0 armhf [installed]
+duetpluginservice/stable,now 3.3.0 armhf [installed,automatic]
+duetruntime/stable,now 3.3.0 armhf [installed,automatic]
+duetsd/stable,now 1.1.0 all [installed,automatic]
+duetsoftwareframework/stable,now 3.3.0 armhf [installed]
+duettools/stable,now 3.3.0 armhf [installed,automatic]
+duetwebcontrol/stable,now 3.3.0 all [installed,automatic]
+duetwebserver/stable,now 3.3.0 armhf [installed,automatic]
+pi@V-Core3:~ $ -xe -u duetcontrolserver
+bash: -xe: command not found
+pi@V-Core3:~ $ sudo journalctl -xe -u duetcontrolserver
+Feb 15 20:34:22 V-Core3 DuetControlServer[32074]: [fatal] Could not connect to D
+Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Failed with resul
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit duetcontrolserver.service has entered the 'failed' state with result
+Feb 15 20:34:22 V-Core3 systemd[1]: Failed to start Duet Control Server.
+-- Subject: A start job for unit duetcontrolserver.service has failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit duetcontrolserver.service has finished with a failure.
+-- 
+-- The job identifier is 60261 and the job result is failed.
+Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Service RestartSe
+Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Scheduled restart
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit duetcontrolserver.service has been scheduled
+-- the configured Restart= setting for the unit.
+lines 3653-3675/3675 (END)
+Feb 15 20:34:22 V-Core3 DuetControlServer[32074]: [fatal] Could not connect to Duet (Timeout while waiting for transfer ready pin)
+Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Failed with result 'protocol'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit duetcontrolserver.service has entered the 'failed' state with result 'protocol'.
+Feb 15 20:34:22 V-Core3 systemd[1]: Failed to start Duet Control Server.
+-- Subject: A start job for unit duetcontrolserver.service has failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit duetcontrolserver.service has finished with a failure.
+-- 
+-- The job identifier is 60261 and the job result is failed.
+Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Scheduled restart job, restart counter is at 926.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit duetcontrolserver.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+~
+~
