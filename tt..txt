@@ -1,3 +1,5 @@
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
 pi@V-Core3:~ $ apt list duet\*
 Listing... Done
 duetcontrolserver/stable,now 3.3.0 armhf [installed,automatic]
@@ -9,8 +11,7 @@ duetsoftwareframework/stable,now 3.3.0 armhf [installed]
 duettools/stable,now 3.3.0 armhf [installed,automatic]
 duetwebcontrol/stable,now 3.3.0 all [installed,automatic]
 duetwebserver/stable,now 3.3.0 armhf [installed,automatic]
-pi@V-Core3:~ $ -xe -u duetcontrolserver
-bash: -xe: command not found
+------------------------------------------------------------------------------------------------------------------------------------------------------
 pi@V-Core3:~ $ sudo journalctl -xe -u duetcontrolserver
 Feb 15 20:34:22 V-Core3 DuetControlServer[32074]: [fatal] Could not connect to D
 Feb 15 20:34:22 V-Core3 systemd[1]: duetcontrolserver.service: Failed with resul
